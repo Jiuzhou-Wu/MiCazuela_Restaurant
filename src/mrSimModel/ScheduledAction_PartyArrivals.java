@@ -22,8 +22,8 @@ public class ScheduledAction_PartyArrivals extends ScheduledAction {
 	protected void actionEvent() {
 		// TODO Auto-generated method stub
 		Party newParty = new Party();
-		newParty.partySize = model.rvp.nextPartySize();
-		if (newParty.partySize < 3)
+		newParty.uSize = model.rvp.nextPartySize();
+		if (newParty.uSize < 3)
 			newParty.thisPartyScale = PartyScale.SMALL;
 		else
 			newParty.thisPartyScale = PartyScale.LARGE;

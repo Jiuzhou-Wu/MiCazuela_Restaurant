@@ -12,7 +12,7 @@ public class Party {
 	}
 	
 	//attributes
-	int partySize;
+	int uSize;
 	PartyScale thisPartyScale;
 	double startWait;
 	double waitTime;
