@@ -38,7 +38,7 @@ public class PartyWaitingList {
 	 * Add a new Party Object to the end of the ArrayList partyWaitingList.
 	 * @param newParty The new arrival Party Object to be added to the end of the ArrayList partyWaitingList.
 	 */
-	public void newArrival(Party newParty)
+	public void newParty(Party newParty)
 	{
 		// should check the capacity of the ArrayList?
 		partyWaitingList.add(newParty);
