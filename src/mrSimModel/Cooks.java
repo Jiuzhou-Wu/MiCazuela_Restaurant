@@ -6,5 +6,6 @@ package mrSimModel;
  *
  */
 public class Cooks {
-
+	int total;
+	int numberAvailable;
 }
