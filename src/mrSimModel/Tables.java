@@ -2,19 +2,24 @@ package mrSimModel;
 
 import java.util.*;
 
+import mrSimModel.Party.PartyScale;
+
 /**
  * 
  * @author Haolong Zhang
  *
  */
 public class Tables{
-	protected class Table{
-		int size;
-	}
+	
 	int numTables;
 	int num4T;
-	LinkedList<Table> list;
+	LinkedList<Party> list;
 	int n;
 	
-	
+	public Tables(int numTables, int num4T){
+		this.numTables = numTables;
+		this.num4T = num4T;
+		list = new LinkedList<Party>();
+		n = 0;
+	}
 }

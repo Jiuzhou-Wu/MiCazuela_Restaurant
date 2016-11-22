@@ -10,28 +10,27 @@ import simulationModelling.Behaviour;
 
 
 public class MiCazuela_Restaurant extends AOSimulationModel{
-	protected ArrayList<Party> qCustLine; // Line
 
 	// References to RVP and DVP objects
 	protected RVPs rvp; // Reference to rvp object
+	protected Seeds sd;
 	
 	// Output object
-	protected Output output = new Output();
-	
+	protected Output output;
+	//system end time
 	protected double closingTime;
+	//system parameter 
+	protected PartyWaitingList qCustLine; // Line
 	
 	protected boolean traceFlag;
 	
+	
 	public MiCazuela_Restaurant(double t0time, double tftime, Seeds sd, boolean traceFlag){
 		
-		this.rvp = new RVPs(this, sd);
 		
-		this.output = new Output();
-		
-		this.qCustLine = new ArrayList<Party>();
 		
 		this.traceFlag = traceFlag;
-		
+		this.sd = sd;
 		initAOSimulModel(t0time, tftime+60);
 		this.closingTime = tftime;
 		
@@ -57,9 +56,7 @@ public class MiCazuela_Restaurant extends AOSimulationModel{
 		// kkShowSBL(sbl);
 		if(traceFlag)
 		{
-			 System.out.println("Clock at: "+getClock()+
-	                    ", Q.CustLine.n: "+qCustLine.size());
-			 showSBL();			
+			 		
 		}
 		 //
 	}

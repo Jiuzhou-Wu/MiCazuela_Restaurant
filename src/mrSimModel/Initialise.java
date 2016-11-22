@@ -19,9 +19,12 @@ public class Initialise extends ScheduledAction{
 
 	@Override
 	protected void actionEvent() {
-		// TODO Auto-generated method stub
-		model.qCustLine.clear();
-		model.output.numberOfArrivels = 0;
+		model.output = new Output();
+		
+		model.rvp = new RVPs(model, model.sd);
+		
+		model.qCustLine = new PartyWaitingList();
+		
 	}
 	
 }
