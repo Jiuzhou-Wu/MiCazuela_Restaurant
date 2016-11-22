@@ -19,6 +19,9 @@ public class MiCazuela_Restaurant extends AOSimulationModel{
 	protected Output output = new Output();
 	
 	protected double closingTime;
+	
+	protected boolean traceFlag;
+	
 	public MiCazuela_Restaurant(double t0time, double tftime, Seeds sd, boolean traceFlag){
 		
 		this.rvp = new RVPs(this, sd);
@@ -26,6 +29,8 @@ public class MiCazuela_Restaurant extends AOSimulationModel{
 		this.output = new Output();
 		
 		this.qCustLine = new ArrayList<Party>();
+		
+		this.traceFlag = traceFlag;
 		
 		initAOSimulModel(t0time, tftime+60);
 		this.closingTime = tftime;
@@ -45,5 +50,17 @@ public class MiCazuela_Restaurant extends AOSimulationModel{
 	
 	public Output getOutput(){
 		return this.output;
+	}
+	
+	public void eventOccured() {
+		// PriorityQueue<SBNotice> sbl = this.getCopySBL();
+		// kkShowSBL(sbl);
+		if(traceFlag)
+		{
+			 System.out.println("Clock at: "+getClock()+
+	                    ", Q.CustLine.n: "+qCustLine.size());
+			 showSBL();			
+		}
+		 //
 	}
 }

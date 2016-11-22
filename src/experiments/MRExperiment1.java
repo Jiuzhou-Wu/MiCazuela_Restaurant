@@ -9,9 +9,9 @@ public class MRExperiment1 {
 	 public static void main(String[] args){
 		 RandomSeedGenerator rsg = new RandomSeedGenerator();
 		 MiCazuela_Restaurant mr;
-		 mr = new MiCazuela_Restaurant(0, 660, new Seeds(rsg), true);
+		 mr = new MiCazuela_Restaurant(0, 360, new Seeds(rsg), true);
 		 mr.runSimulation();
-         System.out.println("Terminated 1"+mr.getOutput().numberOfArrivels);
+         System.out.println("Terminated "+mr.getOutput().numberOfArrivels);
 		 
 	 }
 }

@@ -29,7 +29,7 @@ public class ScheduledAction_PartyArrivals extends ScheduledAction {
 			newParty.thisPartyScale = PartyScale.LARGE;
 		newParty.startWait = model.getClock();
 		newParty.waitTime = 0;
-		
+		model.qCustLine.add(newParty);
 		model.output.numberOfArrivels++;
 	}
 
