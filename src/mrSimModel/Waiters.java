@@ -5,5 +5,6 @@ package mrSimModel;
  *
  */
 public class Waiters {
-
+	int total;
+	int numberAvailable;
 }
