@@ -43,7 +43,7 @@ public class RVPs {
 		MEAN3 = 120/(0.55*numberOfParties);
 		MEAN4 = 60/(0.1*numberOfParties);
 		MEAN5 = 60/(0.1*numberOfParties);
-		
+		model.output.numOfParty = numberOfParties;
 		intervalOfArrival = new Exponential(1.0/MEAN1, new MersenneTwister(sd.intervalOfArrivals_seed));
 	}
 	

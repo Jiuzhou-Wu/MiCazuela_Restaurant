@@ -18,6 +18,7 @@ public class Party {
 	}
 	public Party(int uSize, double startWait){
 		waitTime = 0;
+		this.uSize = uSize;
 		if (uSize < 3)
 			thisPartyScale = PartyScale.SMALL;
 		else

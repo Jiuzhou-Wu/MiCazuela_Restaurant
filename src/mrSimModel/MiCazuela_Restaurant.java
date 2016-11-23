@@ -28,12 +28,13 @@ public class MiCazuela_Restaurant extends AOSimulationModel{
 	//model constants 
 	protected static final int numCooks = 2;
 	
-	protected int numOfTables = 11;
+	protected static final int numOfTables = 11;
 	
-	protected int rgTablesNum4T = 4;
+	protected static final int rgTablesNum4T = 4;
 	
-	protected int numOfWaiters = 2;
- 
+	protected static final int numOfWaiters = 2;
+	
+	protected static final int partyWaitingList_cap = 2;
 	//system parameter
 	protected boolean traceFlag;
 	
@@ -43,8 +44,11 @@ public class MiCazuela_Restaurant extends AOSimulationModel{
 		this.traceFlag = traceFlag;
 		this.sd = sd;
 		initAOSimulModel(t0time, tftime+60);
+		
 		this.closingTime = tftime;
+		this.output = new Output();
 		this.rvp = new RVPs(this, this.sd);
+		
 		Initialise init = new Initialise(this);
 		scheduleAction(init);
 		ScheduledAction_PartyArrivals arrival = new ScheduledAction_PartyArrivals(this);
@@ -65,9 +69,12 @@ public class MiCazuela_Restaurant extends AOSimulationModel{
 	public void eventOccured() {
 		// PriorityQueue<SBNotice> sbl = this.getCopySBL();
 		// kkShowSBL(sbl);
-		if(traceFlag)
-		{
-			 		
+		if(traceFlag){
+			System.out.println("Clock: "+getClock()+ "\n"+
+                    "Q.CustLinep[Large].n: "+this.q_CustLine[0].sizeOf()+ "\n"+
+                    "Q.CustLinep[Small].n: "+this.q_CustLine[1].sizeOf()+ "\n"
+                    );
+			showSBL();	
 		}
 		 //
 	}

@@ -19,7 +19,7 @@ public class Initialise extends ScheduledAction{
 
 	@Override
 	protected void actionEvent() {
-		model.output = new Output();
+		
 		
 		model.q_partyPayList = new PartyPayList();
 		
