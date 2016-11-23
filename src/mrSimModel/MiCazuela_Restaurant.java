@@ -31,7 +31,7 @@ public class MiCazuela_Restaurant extends AOSimulationModel{
 	protected int numOfTables = 11;
 	
 	protected int rgTablesNum4T = 4;
-	
+
 	//system parameter
 	protected boolean traceFlag;
 	
