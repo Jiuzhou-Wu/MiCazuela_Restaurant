@@ -1,10 +1,5 @@
 package mrSimModel;
 
-
-
-import java.util.ArrayList;
-
-
 import simulationModelling.AOSimulationModel;
 import simulationModelling.Behaviour;
 
