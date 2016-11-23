@@ -28,6 +28,8 @@ public class MiCazuela_Restaurant extends AOSimulationModel{
 	
 	protected PartyOrderList orders;
 	
+	protected PartyDelFoodList foodDy;
+	
 	protected int numOfTables = 11;
 	
 	protected int rgTablesNum4T = 4;
@@ -38,10 +40,7 @@ public class MiCazuela_Restaurant extends AOSimulationModel{
 	
 	
 	
-	public MiCazuela_Restaurant(double t0time, double tftime, Seeds sd, boolean traceFlag){
-		
-		
-		
+	public MiCazuela_Restaurant(double t0time, double tftime, Seeds sd, boolean traceFlag){	
 		this.traceFlag = traceFlag;
 		this.sd = sd;
 		initAOSimulModel(t0time, tftime+60);
