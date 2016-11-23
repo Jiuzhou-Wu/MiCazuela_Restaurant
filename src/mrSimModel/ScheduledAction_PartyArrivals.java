@@ -32,7 +32,7 @@ public class ScheduledAction_PartyArrivals extends ScheduledAction {
 			model.q_CustLine[1].newParty(newParty);
 		else
 			model.q_CustLine[0].newParty(newParty);
-		model.output.numberOfArrivels++;
+		
 	}
 
 }

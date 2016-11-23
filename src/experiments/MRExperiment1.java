@@ -11,6 +11,6 @@ public class MRExperiment1 {
 		 MiCazuela_Restaurant mr;
 		 mr = new MiCazuela_Restaurant(0, 300, new Seeds(rsg), true);
 		 mr.runSimulation();
-         System.out.println("Terminated "+mr.getOutput().numberOfArrivels);		 
+         System.out.println("Terminated "+mr.getOutput());		 
 	 }
 }

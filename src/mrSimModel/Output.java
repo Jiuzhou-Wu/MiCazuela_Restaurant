@@ -1,11 +1,26 @@
 package mrSimModel;
 
 public class Output {
-	public int numberOfArrivels;
+	
 	
 	public Output(){
-		//this should be removed later
-		numberOfArrivels = 0;
+		
+		//temp result;
+		int waitersEventOccurTimes;
+		int cooksEventOccurTimes;
+		
+		int totalBusyWaiters;
+		int totalBusyCooks;
+		//DSOV
+		double waiterUtilization;
+		double cookUtilization;
+		//SSOV
+		int numOfParty;
+		double numBalkParty;
+		double numLongWait;
+		double perPartyWait;
+		double perBalkParty;
+		
 	}
 }
 
