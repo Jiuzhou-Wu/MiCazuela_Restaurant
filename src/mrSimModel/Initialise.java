@@ -21,7 +21,7 @@ public class Initialise extends ScheduledAction{
 	protected void actionEvent() {
 		model.output = new Output();
 		
-		
+		model.partyPayList = new PartyPayList();
 		
 		model.qCustLine = new PartyWaitingList();
 		
