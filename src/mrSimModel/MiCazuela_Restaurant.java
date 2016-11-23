@@ -17,24 +17,28 @@ public class MiCazuela_Restaurant extends AOSimulationModel{
 	
 	// Output object
 	protected Output output;
+	
 	//system end time
 	protected double closingTime;
+	
 	//model parameter 
-	protected PartyWaitingList qCustLine; // Line
+	protected PartyWaitingList[] q_CustLine; // Line
 	protected Cooks rg_cooks;
+	protected PartyOrderList q_orders;
+	protected PartyDelFoodList q_foodDy;
+	protected PartyPayList q_partyPayList;
+	protected Tables[] rg_tables;
+	protected Waiters rg_waiters;
 	
 	//model constants 
 	protected static final int numCooks = 2;
 	
-	protected PartyOrderList orders;
-	
-	protected PartyDelFoodList foodDy;
-	
 	protected int numOfTables = 11;
 	
 	protected int rgTablesNum4T = 4;
-
-	protected PartyPayList partyPayList;
+	
+	protected int numOfWaiters = 2;
+ 
 	//system parameter
 	protected boolean traceFlag;
 	

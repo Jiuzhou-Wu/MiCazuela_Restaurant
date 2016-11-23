@@ -5,6 +5,10 @@ package mrSimModel;
  *
  */
 public class Waiters {
-	int total;
-	int numberAvailable;
+	int numW;
+	int busyWaiters;
+	
+	public Waiters(int numW){
+		this.numW = numW;
+	}
 }

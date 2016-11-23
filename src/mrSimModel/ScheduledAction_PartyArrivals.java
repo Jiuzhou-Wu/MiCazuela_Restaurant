@@ -1,5 +1,6 @@
 package mrSimModel;
 
+import mrSimModel.Party.PartyScale;
 import simulationModelling.ScheduledAction;
 
 public class ScheduledAction_PartyArrivals extends ScheduledAction {
@@ -27,7 +28,10 @@ public class ScheduledAction_PartyArrivals extends ScheduledAction {
 		
 		newParty.startWait = model.getClock();
 		
-		model.qCustLine.newParty(newParty);
+		if (newParty.uSize < 3)
+			model.q_CustLine[1].newParty(newParty);
+		else
+			model.q_CustLine[0].newParty(newParty);
 		model.output.numberOfArrivels++;
 	}
 

@@ -21,15 +21,27 @@ public class Initialise extends ScheduledAction{
 	protected void actionEvent() {
 		model.output = new Output();
 		
-		model.partyPayList = new PartyPayList();
+		model.q_partyPayList = new PartyPayList();
 		
-		model.qCustLine = new PartyWaitingList();
+		model.q_CustLine = new PartyWaitingList[2];
+		
+		model.q_CustLine[0] = new PartyWaitingList(); //large 
+		
+		model.q_CustLine[1] = new PartyWaitingList(); //small
+		
+		model.rg_tables = new Tables[2];
+		
+		model.rg_tables[0] = new Tables(model.numOfTables, model.rgTablesNum4T);
+		
+		model.rg_tables[0] = new Tables(model.numOfTables, model.rgTablesNum4T);
+		
+		model.rg_waiters = new Waiters(model.numOfWaiters);
 		
 		model.rg_cooks = new Cooks(model.numCooks);
 		
-		model.orders = new PartyOrderList(model.numOfTables-model.rgTablesNum4T);
+		model.q_orders = new PartyOrderList(model.numOfTables-model.rgTablesNum4T);
 		
-		model.foodDy = new PartyDelFoodList(model.numOfTables-model.rgTablesNum4T);
+		model.q_foodDy = new PartyDelFoodList(model.numOfTables-model.rgTablesNum4T);
 	}
 	
 }
