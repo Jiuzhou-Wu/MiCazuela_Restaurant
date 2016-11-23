@@ -21,11 +21,14 @@ public class Initialise extends ScheduledAction{
 	protected void actionEvent() {
 		model.output = new Output();
 		
-		model.rvp = new RVPs(model, model.sd);
+		
 		
 		model.qCustLine = new PartyWaitingList();
 		
 		model.rg_cooks = new Cooks(model.numCooks);
+		
+		model.orders = new PartyOrderList(model.numOfTables-model.rgTablesNum4T);
+
 	}
 	
 }

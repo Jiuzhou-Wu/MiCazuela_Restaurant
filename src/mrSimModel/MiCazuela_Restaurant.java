@@ -26,6 +26,12 @@ public class MiCazuela_Restaurant extends AOSimulationModel{
 	//model constants 
 	protected static final int numCooks = 2;
 	
+	protected PartyOrderList orders;
+	
+	protected int numOfTables = 11;
+	
+	protected int rgTablesNum4T = 4;
+
 	//system parameter
 	protected boolean traceFlag;
 	
@@ -39,7 +45,7 @@ public class MiCazuela_Restaurant extends AOSimulationModel{
 		this.sd = sd;
 		initAOSimulModel(t0time, tftime+60);
 		this.closingTime = tftime;
-		
+		this.rvp = new RVPs(this, this.sd);
 		Initialise init = new Initialise(this);
 		scheduleAction(init);
 		ScheduledAction_PartyArrivals arrival = new ScheduledAction_PartyArrivals(this);

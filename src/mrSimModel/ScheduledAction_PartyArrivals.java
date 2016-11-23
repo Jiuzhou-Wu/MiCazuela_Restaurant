@@ -14,6 +14,7 @@ public class ScheduledAction_PartyArrivals extends ScheduledAction {
 	@Override
 	protected double timeSequence() {
 		// TODO Auto-generated method stub
+		
 		return model.rvp.nextPartyArrivalAt();
 	}
 
