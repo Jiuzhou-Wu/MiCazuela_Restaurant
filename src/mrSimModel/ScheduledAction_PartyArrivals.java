@@ -1,6 +1,5 @@
 package mrSimModel;
 
-import mrSimModel.Party.PartyScale;
 import simulationModelling.ScheduledAction;
 
 public class ScheduledAction_PartyArrivals extends ScheduledAction {
@@ -21,14 +20,12 @@ public class ScheduledAction_PartyArrivals extends ScheduledAction {
 	@Override
 	protected void actionEvent() {
 		// TODO Auto-generated method stub
-		Party newParty = new Party();
-		newParty.uSize = model.rvp.nextPartySize();
-		if (newParty.uSize < 3)
-			newParty.thisPartyScale = PartyScale.SMALL;
-		else
-			newParty.thisPartyScale = PartyScale.LARGE;
+		int uSize = model.rvp.nextPartySize();
+		Party newParty = new Party(uSize, model.getClock());
+		
+		
 		newParty.startWait = model.getClock();
-		newParty.waitTime = 0;
+		
 		model.qCustLine.newParty(newParty);
 		model.output.numberOfArrivels++;
 	}

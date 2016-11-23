@@ -25,6 +25,7 @@ public class Initialise extends ScheduledAction{
 		
 		model.qCustLine = new PartyWaitingList();
 		
+		model.rg_cooks = new Cooks(model.numCooks);
 	}
 	
 }
