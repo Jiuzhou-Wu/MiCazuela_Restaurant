@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="restaurantModel.Seeds" x="718" y="434">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="restaurantModel.Queue" x="100" y="610">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="restaurantModel.Party"
+            endpointName="queue" kind="Simple"/>
+    </Class>
+    <Class name="restaurantModel.Initialise" x="30" y="120">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="restaurantModel.Restaurant"
+            endpointName="model" kind="Simple"/>
+        <Communication destinationClassName="restaurantModel.Queue"/>
+        <Communication destinationClassName="restaurantModel.RVPs"/>
+        <Communication destinationClassName="restaurantModel.Tables"/>
+    </Class>
+    <Class name="restaurantModel.Constants" x="82" y="54">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="restaurantModel.Eating" x="440" y="19">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="restaurantModel.Party"
+            endpointName="icgParty" kind="Simple"/>
+        <Association destinationClassName="restaurantModel.Restaurant"
+            endpointName="model" kind="Simple"/>
+        <Communication destinationClassName="restaurantModel.RVPs"/>
+    </Class>
+    <Class name="restaurantModel.Waiters" x="59" y="444">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="restaurantModel.PreService" x="693" y="318">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="restaurantModel.Party"
+            endpointName="icgParty" kind="Simple"/>
+        <Association destinationClassName="restaurantModel.Restaurant"
+            endpointName="model" kind="Simple"/>
+        <Communication destinationClassName="restaurantModel.Queue"/>
+        <Communication destinationClassName="restaurantModel.RVPs"/>
+        <Communication destinationClassName="restaurantModel.Tables"/>
+    </Class>
+    <Class name="restaurantModel.Cooks" x="162" y="10">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="restaurantModel.UDP" x="22" y="392">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="restaurantModel.Restaurant"
+            endpointName="model" kind="Simple"/>
+    </Class>
+    <Class name="restaurantModel.Paying" x="72" y="298">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="restaurantModel.Party"
+            endpointName="icgParty" kind="Simple"/>
+        <Association destinationClassName="restaurantModel.Restaurant"
+            endpointName="model" kind="Simple"/>
+        <Communication destinationClassName="restaurantModel.RVPs"/>
+        <Communication destinationClassName="restaurantModel.Tables"/>
+    </Class>
+    <Class name="restaurantModel.PrepareFood" x="220" y="530">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="restaurantModel.Party"
+            endpointName="icgParty" kind="Simple"/>
+        <Association destinationClassName="restaurantModel.Restaurant"
+            endpointName="model" kind="Simple"/>
+        <Communication destinationClassName="restaurantModel.RVPs"/>
+    </Class>
+    <Class name="restaurantModel.Party" x="233" y="127">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="restaurantModel.Restaurant" x="350" y="280">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="restaurantModel.Output"
+            endpointName="output" kind="Simple"/>
+        <Association destinationClassName="restaurantModel.Cooks"
+            endpointName="cook" kind="Simple"/>
+        <Association destinationClassName="restaurantModel.Party"
+            endpointName="qPartyDelFoodList" kind="Simple"/>
+        <Association destinationClassName="restaurantModel.Waiters"
+            endpointName="waiter" kind="Simple"/>
+        <Association destinationClassName="restaurantModel.RVPs"
+            endpointName="rvp" kind="Simple"/>
+        <Association destinationClassName="restaurantModel.Party"
+            endpointName="qPartyPayList" kind="Simple"/>
+        <Association destinationClassName="restaurantModel.Queue"
+            endpointName="qPartywaitinglist" kind="Simple"/>
+        <Association destinationClassName="restaurantModel.Tables"
+            endpointName="rgTable" kind="Simple"/>
+        <Association destinationClassName="restaurantModel.Party"
+            endpointName="qPartyOrderList" kind="Simple"/>
+        <Communication destinationClassName="restaurantModel.Queue"/>
+        <Communication destinationClassName="restaurantModel.Output"/>
+        <Communication destinationClassName="restaurantModel.Waiters"/>
+        <Communication destinationClassName="restaurantModel.DeliverFood"/>
+        <Communication destinationClassName="restaurantModel.PreService"/>
+        <Communication destinationClassName="restaurantModel.PrepareFood"/>
+        <Communication destinationClassName="restaurantModel.Paying"/>
+    </Class>
+    <Class name="restaurantModel.Output" x="627" y="32">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="restaurantModel.Restaurant"
+            endpointName="model" kind="Simple"/>
+    </Class>
+    <Class name="restaurantModel.RVPs" x="536" y="506">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="restaurantModel.Restaurant"
+            endpointName="model" kind="Simple"/>
+    </Class>
+    <Class name="restaurantModel.PartyArrival" x="662" y="224">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="restaurantModel.Restaurant"
+            endpointName="model" kind="Simple"/>
+        <Communication destinationClassName="restaurantModel.Queue"/>
+        <Communication destinationClassName="restaurantModel.RVPs"/>
+    </Class>
+    <Class name="restaurantModel.DeliverFood" x="270" y="16">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="restaurantModel.Party"
+            endpointName="icgParty" kind="Simple"/>
+        <Association destinationClassName="restaurantModel.Restaurant"
+            endpointName="model" kind="Simple"/>
+        <Communication destinationClassName="restaurantModel.Restaurant"/>
+        <Communication destinationClassName="restaurantModel.RVPs"/>
+    </Class>
+    <Class name="restaurantModel.Tables" x="393" y="518">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="restaurantModel.Party"
+            endpointName="tList" kind="Simple"/>
+    </Class>
+</ClassDiagram>
